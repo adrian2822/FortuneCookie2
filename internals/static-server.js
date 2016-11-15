@@ -7,6 +7,7 @@ var fs = require ('fs'),
 exports.serve = function (url, res) {
     var  urlPath = path.resolve(config.STATIC_PATH + url);
     console.log(`Recurso solicitado: ${urlPath}`.data);
+    console.log(`Que paso ¬¬`.data);
 
     fs.exists(urlPath, function(exists){
         if(!exists){

@@ -7,6 +7,7 @@ var fs = require('fs');
 var mime = require('mime');
 var path = require('path');
 var staticServer  = require('./internals/static-server.js');
+var handlers = require('./internals/handlers.js');
 
 //Agregar paqueteria de colores
 //Para importar los colores
@@ -21,10 +22,13 @@ var server = http.createServer(function(req, res){
     if(urlPath == '/'){
         urlPath = ('/index.html');
     }
+    if(typeof (handlers[urlPath]) === "function"){
+        handlers[urlPath](req, res);
+    }else{
         // se llama al servidor estatico
         staticServer.serve(urlPath, res);
-               
-    
+    }
+
 });
 
 server.listen(PORT, IP, function(){
