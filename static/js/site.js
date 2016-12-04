@@ -20,9 +20,26 @@ var fortuna = function(){
         
     
     //swal(mensaje);
-    swal({
-  title: "Tu fortuna es:",
-  text: mensaje,
-  imageUrl: "img/images.jpg"
-});
+    //swal({
+  //title: "Tu fortuna es:",
+  //text: mensaje,
+  //imageUrl: "img/images.jpg"
+//});
+};
+//Forma asincrona
+var getFortuneFromServer = function(){
+    //Realizando la peticion con AJAX
+    //variable de jquery es $
+    $.get("/getfortune","", function(data, status){
+        console.log("> Estatus de Respuesta:" + status);
+        if(status == 'success'){
+        swal({
+            title: "Tu fortuna es:",
+            text: data.message,
+            imageUrl: "img/images.jpg"});//checar aqui el mensaje
+        }else{
+            console.log("Error fortuna");
+            fortuna();
+        }
+    });
 };

@@ -1,0 +1,35 @@
+var mongodb = require("mongodb");
+var mongoClient = mongodb.MongoClient;
+var connectionUrl = 'mongodb://aavalos:Eduardo24@ds115798.mlab.com:15798/fortuneapp';
+
+mongoClient.connect(connectionUrl, function(err, db)){
+    //Verificando que si conecto
+    if(err){
+        console.log(">No se pudo conectar a la base de datos...");
+        throw err;
+    }
+    //Si llega a qui es que no hubo problema de conexion
+    var papers = db.collection('papers');
+    
+    //Armando el documento
+    var mensaje = "";
+    
+    for(var i = 2;i < process.argv.length; i++){
+        mensaje += process.argv[1] + " ";
+    }
+    
+    console.log(`> Mensaje rescatado: ${mensaje}`);
+    
+    //Insertando algo a la coleccion 
+    papers.insert({
+        "message" : mensaje
+    }, function(err, res){
+        if(err){
+            console.log("No se pudo insertar documento");
+            throw err;
+        }
+        //Si llega aqui si pudo insertar
+        console.log(`> Resultado de la insercion:${res}`);
+        db.close();
+    });
+});

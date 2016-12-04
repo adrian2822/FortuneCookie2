@@ -1,27 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+
+  <!---------------------------------------------------------->
+
+
+
     <meta charset="UTF-8">
     <title>Mi estilo asombroso</title>
     <link rel="stylesheet" href="./css/site.css">
     <link rel="icon" href="./img/icono.png" type="image/png">
     <link rel="stylesheet" type="text/css" href="./vendor/sweetalert/dist/sweetalert.css">
 
-
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-    <h1>Avalos huertas adrian ivan</h1>
-    <h1>Galleta de la fortuna</h1>
-    <p>
-        Saludos
-    </p>
-    <p>
-        <button onclick="fortuna()">
-            Romper Galleta</button>
-    </p>
+
+  
+<!------------------------------------------------------------->
+
+ <center><h1>Avalos Huertas Adrian Ivan</h1>
+ </center>
+    
+    
+    <!--Importando Jquery-->
+    <script src="./vendor/jquery/dist/jquery.min.js"></script>
+    <!--importando sweetalert-->
     <script src="./vendor/sweetalert/dist/sweetalert.min.js"></script>
 
     <script src="./js/site.js">    
     </script>
-</body>
+
+
+    <!------------------------------------------------------------->
+
+
+
+
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container"  class="brand-logo">Este es mi proyecto</a>
+      
+      <ul class="right hide-on-med-and-down">
+        
+      </ul>
+
+      <!-------------------------------------------------------->
+        
+      <!--------------------------------------------------------->
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">GALLETA DE LA FORTUNA</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Rompe tu galleta...si te atreves</h5>
+      </div>
+      <div class="row center">
+        
+    
+<p>
+        <button onclick="getFortuneFromServer()" class="btn-large waves-effect waves-light orange">
+            Romper Galleta</button>
+    </p>
+
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+
+  <!-------------------------------------------->
+  
+
+              
+  <!------------------------------------------------->
+<br>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Galleta express</h5>
+
+            <p class="light">Si no tienes tiempo de abrir y romper tu galleta, o simplemente te da flojera, puedes hacerlo con un simple click....waoooo</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">Una nueva experiencia</h5>
+
+            <p class="light">Aqui probaras o mejor dicho, utilizaras una nueva forma de romper tu galleta sin tener galletas...</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">Dudas</h5>
+
+            <p class="light">Si no sabes como romper tu galleta, no nos contactes, no se...pierdete mejor</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+<!----------------------------------->
+ <div class="row">
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image" >
+              <img src=".\img\descarga.jpg" width="50" height="200">
+              <span class="card-title"></span>
+            </div>
+            <div class="card-content">
+              <p>Esto fue hecho por un alumno de noveno semestre de la carrera en Tecnologias de la informacion del Instituto Tecnologico Gustavo A. Madero</p>
+            </div>
+            
+            
+          </div>
+        </div>
+      </div>
+<!------------------------------------>
+
+
+
+    <br><br>
+
+    <div class="section">
+
+    </div>
+  </div>
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Creacion</h5>
+          <p class="grey-text text-lighten-4">Este proyecto fue realizado por un alumno cursando la materia Programacion de aplicaciones web, en donde se realizo el diseño para crear una galleta de la fortuna utilizando las tecnologias existentes e implementarlas.</p>
+
+
+        </div>
+       
+          
+        <div class="col l3 s12">
+          <h5 class="white-text">Contacta</h5>
+          <ul>
+            <li><a class="white-text" href="https://www.facebook.com/adrian.core.9279">Facebook personal</a></li>
+            <li><a class="white-text" href="http://itgustavoamadero.edu.mx/web2/
+">Pagina de la escuela</a></li>
+            <li><a class="white-text" href="https://www.facebook.com/Instituto-Tecnol%C3%B3gico-De-Gustavo-A-Madero-Oficial-276446592565027/?fref=ts">Facebook de la escuela</a></li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
 </html>

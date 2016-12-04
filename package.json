@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url":  "#"
+    "url": "#"
   },
   "keywords": [
     "http",
@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "colors": "^1.1.2",
+    "materialize": "^1.0.0",
     "mime": "^1.3.4"
   }
 }
