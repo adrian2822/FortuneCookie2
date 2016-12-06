@@ -19,12 +19,12 @@ var fortuna = function(){
         var mensaje = Frase[fraseAleatoria];
         
     
-    //swal(mensaje);
-    //swal({
-  //title: "Tu fortuna es:",
-  //text: mensaje,
-  //imageUrl: "img/images.jpg"
-//});
+    swal(mensaje);
+    swal({
+  title: "Tu fortuna es:",
+  text: mensaje,
+  imageUrl: "img/images.jpg"
+});
 };
 //Forma asincrona
 var getFortuneFromServer = function(){
